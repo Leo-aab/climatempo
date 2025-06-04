@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>ClimaTempo | Previsão do Tempo</title> 
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    
+    <nav class="header">
+
+        <div class="logo">
+            <i class="fas fa-cloud-sun"></i>
+            <h1>ClimaTempo</h1> 
+        </div>
+        
+       
+        <div class="search-container">
+            
+            <input type="text" id="city-input" placeholder="Digite o nome da cidade..." class="search-input">
+   
+            <button id="search-btn" class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+
+   
+    <main class="content">
+       
+        <div class="weather-container" id="weather">
+        
+            <div class="weather-card">
+      
+                <div class="weather-header">
+                    <h2 id="city-name">Busque uma cidade</h2> 
+                    <p id="current-date"></p>
+                </div>
+                
+          
+                <div class="weather-main">
+                    <div class="weather-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="weather-temp" id="temperature">--°C</div>
+                    <div class="weather-desc" id="description">Descrição do clima</div> 
+                </div>
+                
+              
+                <div class="weather-details">
+    
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity">--%</span>
+                    </div>
+   
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind-speed">-- m/s</span>
+                    </div>
+                    
+
+                    <div class="detail-item">
+                        <i class="fas fa-temperature-low"></i>
+                        <span id="feels-like">--°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+      
+        <p>&copy; <span id="current-year"></span> ClimaTempo de Teste - Todos os direitos reservados</p>
+
+        <p class="credits">Dados meteorológicos fornecidos por <a href="https://www.met.no/" target="_blank">MET Norway</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
