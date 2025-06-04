@@ -40,6 +40,7 @@ async function searchWeather() {
 }
 
 async function getCityCoordinates(city) {
+    const proxyUTL= 'https://cors-anywhere.herokuapp.com/';
     const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(city)}&format=json`;
     const response = await fetch(url);
     const data = await response.json();
@@ -55,6 +56,7 @@ async function getCityCoordinates(city) {
 }
 
 async function getWeatherData(lat, lon) {
+    const proxyUTL= 'https://cors-anywhere.herokuapp.com/';
     const url = `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lon}`;
     const response = await fetch(url, {
         headers: {
